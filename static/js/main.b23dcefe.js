@@ -8364,7 +8364,7 @@
             var t = e.data,
                 n = "",
                 r = t.date.format("YYYY-MM-DD");
-            return t.uptime >= 100 ? (n = "ok", r += "availability ".concat(ie(t.uptime), "%")) : t.uptime <= 0 && 0 === t.down.times ? (n = "none", r += " No data") : (n = "down", r += " down ".concat(t.down.times, " times, add up to ").concat(oe(t.down.duration), ", availability ").concat(ie(t.uptime), "%")), o.a.createElement("i", {
+            return t.uptime >= 100 ? (n = "ok", r += " availability ".concat(ie(t.uptime), "%")) : t.uptime <= 0 && 0 === t.down.times ? (n = "none", r += " No data") : (n = "down", r += " down ".concat(t.down.times, " times, add up to ").concat(oe(t.down.duration), ", availability ").concat(ie(t.uptime), "%")), o.a.createElement("i", {
                 className: n,
                 "data-tip": r
             })
@@ -8375,15 +8375,15 @@
                 r = t.CountDays,
                 i = e.monitor,
                 a = i.daily[i.daily.length - 1].date,
-                u = i.total.times ? "Last ".concat(r, " days down ").concat(i.total.times, " times, add up to ").concat(oe(i.total.duration), ", average availability ").concat(i.average, "%") : "Last ".concat(r, " days avaliable ").concat(i.average, "%");
+                u = i.total.times ? "Last ".concat(r, " days down ").concat(i.total.times, " times, add up to ").concat(oe(i.total.duration), ", average availability ").concat(i.average, "%") : "Last ".concat(r, " days available ").concat(i.average, "%");
             return o.a.createElement("div", {className: "item"}, o.a.createElement("div", {className: "meta"}, o.a.createElement("div", {className: "info"}, o.a.createElement("span", {className: "name"}, i.name), n && o.a.createElement(l, {
                 className: "link",
                 to: i.url,
                 text: i.name
             })), o.a.createElement("div", {className: "status ".concat(i.status)}, {
-                ok: "normal",
-                down: "down",
-                unknow: "unknow"
+                ok: "Available",
+                down: "Down",
+                unknow: "Unknow"
             } [i.status])), o.a.createElement("div", {className: "timeline"}, i.daily.map((function (e, t) {
                 return o.a.createElement(ae, {
                     key: t,
