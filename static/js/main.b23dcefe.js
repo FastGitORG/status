@@ -8354,8 +8354,8 @@
                 n = 0,
                 r = 0;
             t >= 60 && (n = parseInt(t / 60), t = parseInt(t % 60), n >= 60 && (r = parseInt(n / 60), n = parseInt(n % 60)));
-            var o = "".concat(t, " \u79d2");
-            return n > 0 && (o = "".concat(n, " \u5206 ").concat(o)), r > 0 && (o = "".concat(r, " \u5c0f\u65f6 ").concat(o)), o
+            var o = "".concat(t, " seconds");
+            return n > 0 && (o = "".concat(n, " minutes ").concat(o)), r > 0 && (o = "".concat(r, " hours ").concat(o)), o
         },
         ie = function (e) {
             return (Math.floor(100 * e) / 100).toString()
@@ -8364,7 +8364,7 @@
             var t = e.data,
                 n = "",
                 r = t.date.format("YYYY-MM-DD");
-            return t.uptime >= 100 ? (n = "ok", r += " \u53ef\u7528\u7387 ".concat(ie(t.uptime), "%")) : t.uptime <= 0 && 0 === t.down.times ? (n = "none", r += " \u65e0\u6570\u636e") : (n = "down", r += " \u6545\u969c ".concat(t.down.times, " \u6b21\uff0c\u7d2f\u8ba1 ").concat(oe(t.down.duration), "\uff0c\u53ef\u7528\u7387 ").concat(ie(t.uptime), "%")), o.a.createElement("i", {
+            return t.uptime >= 100 ? (n = "ok", r += "availability ".concat(ie(t.uptime), "%")) : t.uptime <= 0 && 0 === t.down.times ? (n = "none", r += " No data") : (n = "down", r += " down ".concat(t.down.times, " times, add up to ").concat(oe(t.down.duration), ", availability ").concat(ie(t.uptime), "%")), o.a.createElement("i", {
                 className: n,
                 "data-tip": r
             })
@@ -8375,15 +8375,15 @@
                 r = t.CountDays,
                 i = e.monitor,
                 a = i.daily[i.daily.length - 1].date,
-                u = i.total.times ? "\u6700\u8fd1 ".concat(r, " \u5929\u6545\u969c ").concat(i.total.times, " \u6b21\uff0c\u7d2f\u8ba1 ").concat(oe(i.total.duration), "\uff0c\u5e73\u5747\u53ef\u7528\u7387 ").concat(i.average, "%") : "\u6700\u8fd1 ".concat(r, " \u5929\u53ef\u7528\u7387 ").concat(i.average, "%");
+                u = i.total.times ? "Last ".concat(r, " days down ").concat(i.total.times, " times, add up to ").concat(oe(i.total.duration), ", average availability ").concat(i.average, "%") : "Last ".concat(r, " days avaliable ").concat(i.average, "%");
             return o.a.createElement("div", {className: "item"}, o.a.createElement("div", {className: "meta"}, o.a.createElement("div", {className: "info"}, o.a.createElement("span", {className: "name"}, i.name), n && o.a.createElement(l, {
                 className: "link",
                 to: i.url,
                 text: i.name
             })), o.a.createElement("div", {className: "status ".concat(i.status)}, {
-                ok: "\u6b63\u5e38",
-                down: "\u65e0\u6cd5\u8bbf\u95ee",
-                unknow: "\u672a\u77e5"
+                ok: "normal",
+                down: "down",
+                unknow: "unknow"
             } [i.status])), o.a.createElement("div", {className: "timeline"}, i.daily.map((function (e, t) {
                 return o.a.createElement(ae, {
                     key: t,
@@ -8394,7 +8394,7 @@
                 place: "top",
                 type: "dark",
                 effect: "solid"
-            }), o.a.createElement("div", {className: "foot"}, o.a.createElement("span", null, "\u4eca\u5929"), o.a.createElement("span", null, u), o.a.createElement("span", null, a.format("YYYY-MM-DD"))))
+            }), o.a.createElement("div", {className: "foot"}, o.a.createElement("span", null, "Today"), o.a.createElement("span", null, u), o.a.createElement("span", null, a.format("YYYY-MM-DD"))))
         },
         ue = n(2),
         se = n.n(ue);
