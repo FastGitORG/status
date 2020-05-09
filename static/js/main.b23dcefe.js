@@ -8370,7 +8370,7 @@
                 r = t.CountDays,
                 i = e.monitor,
                 a = i.daily[i.daily.length - 1].date,
-                u = i.total.times ? "Last ".concat(r, " days down ").concat(i.total.times, " times, add up to ").concat(oe(i.total.duration), ", average availability ").concat(i.average, "%") : "Last ".concat(r, " days available ").concat(i.average, "%");
+                u = i.total.times ? "Last ".concat(r, " days down ").concat(i.total.times, " times, up to ").concat(oe(i.total.duration), ", average availability ").concat(i.average, "%") : "Last ".concat(r, " days availability ").concat(i.average, "%");
             return o.a.createElement("div", {className: "item"}, o.a.createElement("div", {className: "meta"}, o.a.createElement("div", {className: "info"}, o.a.createElement("span", {className: "name"}, i.name), n && o.a.createElement(l, {
                 className: "link",
                 to: i.url,
