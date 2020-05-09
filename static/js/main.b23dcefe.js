@@ -7231,7 +7231,7 @@
         s = function () {
             return o.a.createElement("div", {id: "footer"}
                 , o.a.createElement("div", {className: "container"}
-                , o.a.createElement("p", null, "Last built 2020-05-01")
+                , o.a.createElement("p", null, "Last built 2020-05-09")
                     , o.a.createElement("p", null, "© 2020 FastGit. Status based on "
                         , o.a.createElement(l, {
                             to: "https://uptimerobot.com/",
