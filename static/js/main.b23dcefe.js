@@ -8378,7 +8378,7 @@
             })), o.a.createElement("div", {className: "status ".concat(i.status)}, {
                 ok: "Available",
                 down: "Down",
-                unknow: "Unknow"
+                unknow: "Unknown"
             } [i.status])), o.a.createElement("div", {className: "timeline"}, i.daily.map((function (e, t) {
                 return o.a.createElement(ae, {
                     key: t,
