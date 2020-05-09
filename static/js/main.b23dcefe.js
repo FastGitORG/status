@@ -8359,7 +8359,7 @@
             var t = e.data,
                 n = "",
                 r = t.date.format("YYYY-MM-DD");
-            return t.uptime >= 100 ? (n = "ok", r += " availability ".concat(ie(t.uptime), "%")) : t.uptime <= 0 && 0 === t.down.times ? (n = "none", r += " No data") : (n = "down", r += " down ".concat(t.down.times, " times, add up to ").concat(oe(t.down.duration), ", availability ").concat(ie(t.uptime), "%")), o.a.createElement("i", {
+            return t.uptime >= 100 ? (n = "ok", r += " availability ".concat(ie(t.uptime), "%")) : t.uptime <= 0 && 0 === t.down.times ? (n = "none", r += " No data") : (n = "down", r += " down ".concat(t.down.times, " times, up to ").concat(oe(t.down.duration), ", availability ").concat(ie(t.uptime), "%")), o.a.createElement("i", {
                 className: n,
                 "data-tip": r
             })
